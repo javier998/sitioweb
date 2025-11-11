@@ -1,49 +1,103 @@
+<!doctype html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Contacto - CodeBuilder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&displa
+y=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div>
-                <h1 class="titulo">{CodeBuilder}</h1>
-            </div>
-            <div>
-                <ul>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img src="recursos/imagenes/logo.png" alt="logo" class="brand-logo">
+                <span class="brand-text">CodeBuilder</span>
+            </a>
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav-list">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
     </header>
     <main>
-        <section class="container">
-            <div class="bienvenido">
-                <h2 class="text-center">Contactanos</h2>
-                <p>¿Listo para llevar tu negocio al siguiente nivel?</p>
-                <p>En <strong>CodeBuilder</strong> queremos escucharte y ayudarte a hacer realidad tus ideas.</p>
-                <ul>
-                    <li><strong>Dirección:</strong> Calle Tarqui y Calle Larga, Cuenca, Ecuador</li>
-                    <li><strong>Teléfono:</strong> +593 7 283 4567</li>
-                    <li><strong>Correo:</strong> contacto@codebuilder.ec</li>
-                    <li><strong>Sitio Web:</strong> www.codebuilder.ec</li>
-                    <li><strong>Horario de Atención</strong> Lunes a Viernes, 08h00 a 18h00</li>
-                </ul>
-                <p>También puedes seguirnos en nuestras redes sociales</p>
-                <ul>
-                    <li><strong>Facebook:</strong> facebook.com/codebuilder.ec</li>
-                    <li><strong>Instagram:</strong> @codebuilder_ec</li>
-                    <li><strong>LinkendIn:</strong> CodeBuilder Ecuador</li>
-                </ul>
+        <section class="section">
+            <div class="container">
+                <h1>Contacto</h1>
+                <p class="muted">Escríbenos y responderemos a la brevedad.</p>
+                <form class="card" style="margin-top:1rem;display:grid;gap:0.75rem">
+                    <label>
+                        Nombre
+                        <input type="text" name="nombre" placeholder="Tu nombre" style="width:100%;padding:0.6rem;border-radius:6px;border:1px solid
+rgba(255,255,255,0.05);background:transparent;color:var(--text)">
+                    </label>
+                    <label>
+                        Correo
+                        <input type="email" name="correo" placeholder="tu@correo.com" style="width:100%;padding:0.6rem;border-radius:6px;border:1px solid
+rgba(255,255,255,0.05);background:transparent;color:var(--text)">
+                    </label>
+                    <label>
+                        Mensaje
+                        <textarea rows="5" name="mensaje" placeholder="Escribe tu mensaje..." style="width:100%;padding:0.6rem;border-radius:6px;border:1px solid
+rgba(255,255,255,0.05);background:transparent;color:var(--text)"></textarea>
+                    </label>
+                    <div style="display:flex;gap:0.5rem;justify-content:flex-end">
+                        <button class="btn btn-outline" type="reset">Limpiar</button>
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                    </div>
+                </form>
+                
+                <div class="card" style="margin-top:1rem;display:grid;gap:0.75rem">
+                    <p>¿Listo para llevar tu negocio al siguiente nivel?</p>
+                    <p>En <strong>CodeBuilder</strong> queremos escucharte y ayudarte a hacer realidad tus ideas.</p>
+                    <ul>
+                        <li style="list-style-type: none;"><strong>Dirección:</strong> Calle Tarqui y Calle Larga, Cuenca, Ecuador</li>
+                        <li style="list-style-type: none;"><strong>Teléfono:</strong> +593 7 283 4567</li>
+                        <li style="list-style-type: none;"><strong>Correo:</strong> contacto@codebuilder.ec</li>
+                        <li style="list-style-type: none;"><strong>Sitio Web:</strong> www.codebuilder.ec</li>
+                        <li style="list-style-type: none;"><strong>Horario de Atención</strong> Lunes a Viernes, 08h00 a 18h00</li>
+                    </ul>
+                    <p>También puedes seguirnos en nuestras redes sociales</p>
+                    <ul>
+                        <li style="list-style-type: none;"><strong>Facebook:</strong> facebook.com/codebuilder.ec</li>
+                        <li style="list-style-type: none;"><strong>Instagram:</strong> @codebuilder_ec</li>
+                        <li style="list-style-type: none;"><strong>LinkendIn:</strong> CodeBuilder Ecuador</li>
+                    </ul>
+                </div>
+            
             </div>
         </section>
+        
+            
+        
     </main>
-    <footer>
-        <p>© 2025 CodeBuilder. Todos los derechos reservados.</p>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div><strong>CodeBuilder</strong>
+                <p>Proyecto de Desarrollo de Aplicaciones
+                    Web</p>
+            </div>
+            <div class="social"><a href="#"><i class="fa fa-github"></i></a></div>
+        </div>
     </footer>
+    <script>
+        document.querySelector('.nav-toggle')?.addEventListener('click', () =>
+            document.querySelector('.nav').classList.toggle('open'));
+        // Para demo: evita recarga de formulario
+        document.querySelector('form')?.addEventListener('submit', e => {
+            e.preventDefault(); alert('Formulario simulado: mensaje enviado.');
+        });
+    </script>
 </body>
+
 </html>

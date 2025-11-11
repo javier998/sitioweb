@@ -1,48 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeBuilder</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CodeBuilder - Proyecto Web</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap
+" rel="stylesheet">
+    <!-- Font Awesome (íconos) -->
+    <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
+    <!-- Si no usas kit, cambia por: <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div>
-                <h1 class="titulo">{CodeBuilder}</h1>
-            </div>
-            <div>
-                <ul>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img src="recursos/imagenes/logo.png" alt="logo" class="brand-logo">
+                <span class="brand-text">CodeBuilder</span>
+            </a>
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav-list">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
     </header>
     <main>
-        <section class="container">
-            <div class="bienvenido">
-                <h2 class="text-center">Bienvenidos a CodeBuilder</h2>
-                <p>En <strong>CodeBuilder</strong> transformamos ideas en soluciones digitales innovadoras.</p>
-                <p>Somos una empresa ecuatoriana especializada en el desarrollo de software a medida, aplicaciones
-                    móviles y
-                    sistemas web empresariales.</p>
-                <p>Nuestro objetivo es impulsar la transformación tecnológica de negocios locales y regionales,
-                    ofreciendo herramientas ágiles, seguras y escalables que mejoran la productividad y la experiencia
-                    del usuario.</p>
-                <div style="text-align: center;">
-                    <img src="recursos/imagenes/recurso1.jpeg" alt="Actividad de la Empresa" width="80%">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Bienvenidos a CodeBuilder</h1>
+                    <p>En <strong>CodeBuilder</strong> transformamos ideas en soluciones digitales innovadoras.</p>
+                    <p>Somos una empresa ecuatoriana especializada en el desarrollo de software a medida, aplicaciones
+                        móviles y
+                        sistemas web empresariales.</p>
+                    <p>Nuestro objetivo es impulsar la transformación tecnológica de negocios locales y regionales,
+                        ofreciendo herramientas ágiles, seguras y escalables que mejoran la productividad y la
+                        experiencia
+                        del usuario.</p>
+                    <p class="cta-row">
+                        <a class="btn btn-primary" href="#portafolio">Ver Portafolio</a>
+                        <a class="btn btn-outline" href="contacto.html">Contáctanos</a>
+                    </p>
+                </div>
+                <div class="hero-illustration" aria-hidden="true">
+                    <!-- imagen de apoyo -->
+                    <img src="recursos/imagenes/logo.png" alt="" />
+                </div>
+            </div>
+        </section>
+        <!-- SERVICIOS (nueva sección) -->
+        <section id="servicios" class="section servicios">
+            <div class="container">
+                <h2 class="section-title">Servicios</h2>
+                <p class="muted">Ofrecemos soluciones enfocadas en experiencia de usuario y
+                    rendimiento.</p>
+                <div class="cards-grid">
+                    <article class="card">
+                        <i class="fa fa-laptop-code icon-large" aria-hidden="true"></i>
+                        <h3>Desarrollo Web</h3>
+                        <p>HTML5 semántico, CSS moderno, JavaScript y buenas prácticas.</p>
+                    </article>
+                    <article class="card">
+                        <i class="fa fa-mobile-screen-button icon-large" aria-hidden="true"></i>
+                        <h3>Responsive Design</h3>
+                        <p>Diseños que funcionan en móvil, tablet y escritorio usando Flexbox y Grid.</p>
+                    </article>
+                    <article class="card">
+                        <i class="fa fa-diagram-project icon-large" aria-hidden="true"></i>
+                        <h3>Optimización</h3>
+                        <p>Mejora de rendimiento, accesibilidad y estructura semántica.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- PORTAFOLIO (nueva sección) -->
+        <section id="portafolio" class="section portafolio">
+            <div class="container">
+                <h2 class="section-title">Portafolio</h2>
+                <p class="muted">Proyectos y ejemplos de trabajos.</p>
+                <div class="portfolio-grid">
+                    <!-- tarjeta de proyecto (reemplaza imágenes y textos reales) -->
+                    <figure class="portfolio-item">
+                        <img src="recursos/imagenes/html.JPG" alt="Proyecto 1">
+                        <figcaption>
+                            <h4>Proyecto 1</h4>
+                            <p>Landing page responsiva - HTML & CSS</p>
+                            <a class="small-link" href="#">Ver demo</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="portfolio-item">
+                        <img src="recursos/imagenes/maquetado.jpeg" alt="Proyecto 2">
+                        <figcaption>
+                            <h4>Proyecto 2</h4>
+                            <p>Sitio corporativo - Diseño y maquetado</p>
+                            <a class="small-link" href="#">Ver demo</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="portfolio-item">
+                        <img src="recursos/imagenes/ui.jpeg" alt="Proyecto 3">
+                        <figcaption>
+                            <h4>Proyecto 3</h4>
+                            <p>Aplicación UI - Prototipo</p>
+                            <a class="small-link" href="#">Ver demo</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!-- SOBRE NOSOTROS (resumen) -->
+        <section class="section about-compact">
+            <div class="container split">
+                <div>
+                    <h2>Sobre nosotros</h2>
+                    <p>Proyecto de Desarrollo de Aplicaciones Web. Hecho por Nixon Alexander y
+                        Wilson Javier.</p>
+                    <a class="small-link" href="nosotros.html">Leer más</a>
+                </div>
+                <div>
+                    <ul class="about-list">
+                        <li><i class="fa fa-check-circle"></i> Buenas prácticas</li>
+                        <li><i class="fa fa-check-circle"></i> Responsive</li>
+                        <li><i class="fa fa-check-circle"></i> Accesibilidad</li>
+                    </ul>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <p>© 2025 CodeBuilder. Todos los derechos reservados.</p>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>CodeBuilder</strong>
+                <p>Proyecto de Desarrollo de Aplicaciones Web</p>
+            </div>
+            <nav aria-label="Enlaces de pie">
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a aria-label="GitHub" href="#"><i class="fa fa-github"></i></a>
+                <a aria-label="LinkedIn" href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="container copyright">
+            <small>© 2025 Nixon Alexander & Wilson Javier</small>
+        </div>
     </footer>
+    <script>
+        // Toggle menú móvil sencillo
+        const btn = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+        btn && btn.addEventListener('click', () => nav.classList.toggle('open'));
+    </script>
 </body>
 
 </html>
