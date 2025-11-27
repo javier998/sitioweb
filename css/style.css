@@ -1,5 +1,3 @@
-/* Paleta: Azul profundo (#0f1724) + Azul claro (#1d4ed8) + Blanco + Gris suave */
-/* Tipografía: Inter */
 :root {
     --bg: #0f1724;
     --primary: #1d4ed8;
@@ -55,7 +53,7 @@ body {
     justify-content: space-between;
     gap: var(--gap);
     padding: 0.75rem 0;
-    position: relative; /* 👈 Necesario para el menú absoluto */
+    position: relative;
 }
 
 .brand {
@@ -63,7 +61,7 @@ body {
     align-items: center;
     gap: 0.6rem;
     text-decoration: none;
-    color: var(--text); /* 👈 corregido: antes decía var(--tex t) */
+    color: var(--text);
 }
 
 .brand-logo {
@@ -231,7 +229,6 @@ body {
     font-weight: 600;
 }
 
-/* About compact */
 .split {
     display: flex;
     gap: 2rem;
@@ -284,8 +281,10 @@ body {
     margin-left: 0.5rem;
 }
 
-/* Responsive Media Queries */
-/* Mobile first already; now tablet and desktop adjustments */
+.hidden {
+    display: none;
+}
+
 @media (max-width: 900px) {
     .hero-grid {
         grid-template-columns: 1fr;
@@ -308,9 +307,15 @@ body {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .hidden {
+        display: none;
+    }
+
 }
 
 @media (max-width: 600px) {
+
     /* === MENÚ RESPONSIVO === */
     .nav-list {
         display: none;
@@ -362,5 +367,44 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+}
+
+/* === BUSCADOR === */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: var(--card);
+    padding: 0.2rem 0.6rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text);
+    width: 130px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Responsive: buscador ocupa todo */
+@media (max-width:600px) {
+    .search-box {
+        width: 100%;
+        margin-top: .5rem;
     }
 }

@@ -4,14 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>CodeBuilder - Proyecto Web</title>
+    <title>CodeBuilder</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap
-" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome (íconos) -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Si no usas kit, cambia por: <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -31,13 +28,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+            <form id="searchForm" class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
             <button class="nav-toggle" aria-label="Abrir menú">
                 <i class="fa fa-bars"></i>
             </button>
         </div>
     </header>
-    <main>
-        <!-- HERO -->
+    <main id="mainInterface">
         <section class="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
@@ -139,6 +139,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             </div>
         </section>
     </main>
+    <section id="resultArea" class="hidden">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="mensaje"></p>
+                    <button id="btnVolver" class="hidden">Salir de Búsqueda</button>
+                </div>
+            </div>
+        </section>
+
+    </section>
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
@@ -161,11 +172,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             <small>© 2025 Nixon Alexander & Wilson Javier</small>
         </div>
     </footer>
-    <script>
-        const btn = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('.nav');
-        btn && btn.addEventListener('click', () => nav.classList.toggle('open'));
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

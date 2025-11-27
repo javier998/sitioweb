@@ -59,17 +59,29 @@
     </main>
     <footer class="site-footer">
         <div class="container footer-grid">
-            <div><strong>CodeBuilder</strong>
-                <p>Proyecto de Desarrollo de Aplicaciones
-                    Web</p>
+            <div>
+                <strong>CodeBuilder</strong>
+                <p>Proyecto de Desarrollo de Aplicaciones Web</p>
             </div>
-            <div class="social"><a href="#"><i class="fa fa-github"></i></a></div>
+            <nav aria-label="Enlaces de pie">
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <!--<div class="social">
+                <a aria-label="GitHub" href="#"><i class="fa fa-github"></i></a>
+                <a aria-label="LinkedIn" href="#"><i class="fa fa-linkedin"></i></a>
+            </div>-->
+        </div>
+        <div class="container copyright">
+            <small>© 2025 Nixon Alexander & Wilson Javier</small>
         </div>
     </footer>
     <script>
         document.querySelector('.nav-toggle')?.addEventListener('click', () =>
             document.querySelector('.nav').classList.toggle('open'));
-        // Para demo: evita recarga de formulario
         document.querySelector('form')?.addEventListener('submit', e => {
             e.preventDefault(); alert('Formulario simulado: mensaje enviado.');
         });
